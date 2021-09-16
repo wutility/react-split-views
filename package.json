@@ -1,13 +1,13 @@
 {
   "name": "react-split-views",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Utility for Resizable Split Views.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "browser": "dist/index.js",
   "files": [
     "dist/*"
-  ],  
+  ],
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -56,12 +56,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }, 
+  },
   "keywords": [
     "react",
     "split",
     "split pane",
     "splitter",
     "split.js"
-  ]
+  ],
+  "author": "Haikel Fazzani",
+  "license": "MIT",
+  "repository": "git+https://github.com/wutility/react-split-views.git",
+  "bugs": "https://github.com/wutility/react-split-views.git/issues",
+  "homepage": "https://github.com/wutility/react-split-views.git#readme"
 }

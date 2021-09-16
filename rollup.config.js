@@ -29,8 +29,8 @@ export default {
       plugins: ['@babel/plugin-transform-runtime'],
       babelHelpers: 'runtime',
       exclude: 'node_modules/**'
-    }),    
+    }),
     commonjs(),
-    terser()
+    process.env.NODE_ENV === 'production' ? terser() : ''
   ]
 };

@@ -3,11 +3,12 @@ import SplitViews from 'split-views';
 
 export default function ReactSplitViews ({
   children,
+  style = { display: "flex" },
   className = "split-views",
   onDragEnd,
   gutterSize = 5,
-  minSize = 20,
-  sizes = [],
+  minSize = 0,
+  sizes,
   direction = 'horizontal'
 }) {
 
@@ -29,7 +30,7 @@ export default function ReactSplitViews ({
     }
   }, []);
 
-  return (<div className={className + " " + direction} ref={parentRef}
+  return (<div className={className + " " + direction} style={style} ref={parentRef}
     style={{ flexDirection: direction === 'horizontal' ? 'row' : 'column' }}>
     {children.map((child, i) => <Fragment key={i}>
       {child}

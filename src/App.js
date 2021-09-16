@@ -9,9 +9,6 @@ $ yarn add react-split-views`
 
   const jsxCode = `import ReactSplitViews from 'react-react-split-views';
 
-// required this css line because SplitViews is flexbox based
-// .react-split-views { display: flex; }
-
 <ReactSplitViews sizes={[25, 50, 25]}>
   <div>1</div>
   <div>2</div>

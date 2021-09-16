@@ -8,16 +8,16 @@
 - Compatible: Firefox - Chrome - Safari - Opera - Android - (FlexBox is not supported in IE).
 
 <div align="center" style="width:100%; text-align:center;">
-<img src="https://badgen.net/bundlephobia/minzip/react-split-views" alt="react-split-views" />
-  <img src="https://badgen.net/bundlephobia/dependency-count/react-split-views" alt="react-split-views" />
-  <img src="https://badgen.net/npm/v/react-split-views" alt="react-split-views" />
-  <img src="https://badgen.net/npm/dt/react-split-views" alt="react-split-views" />
-  <img src="https://data.jsdelivr.com/v1/package/npm/react-split-views/badge" alt="react-split-views"/>
+<img src="https://badgen.net/bundlephobia/minzip/react-split-views" alt="react split views" />
+  <img src="https://badgen.net/bundlephobia/dependency-count/react split-views" alt="react split views" />
+  <img src="https://badgen.net/npm/v/react-split-views" alt="react split views" />
+  <img src="https://badgen.net/npm/dt/react-split-views" alt="react split views" />
+  <img src="https://data.jsdelivr.com/v1/package/npm/react-split-views/badge" alt="react split views"/>
 </div>  
 
 <hr />  
 
-### [Demo](https://react-split-views.netlify.app/)
+### [Demo](https://react-split-views.netlify.app)
 
 ```js
 $ npm i react-split-views
@@ -38,15 +38,16 @@ import ReactSplitViews from 'react-split-views';
 <!-- Access via global object : window.ReactSplitViews -->
 ```            
 
-## Methods & Examples
+## Usage
 
 ```jsx
 import ReactSplitViews from 'react-split-views';
 
-// required this css line because SplitViews is flexbox based
-// .split-views { display: flex; }
-
-<ReactSplitViews className="split-view" direction="horizontal" sizes={[25, 50, 25]}>
+<ReactSplitViews 
+    direction="horizontal"
+    sizes={[25, 50, 25]} // required
+    onDragEnd={(newSizes) => {}}
+  >
   <div>1</div>
   <div>2</div>
   <div>3</div>
@@ -55,14 +56,15 @@ import ReactSplitViews from 'react-split-views';
 
 ## Props
 
-| Name         | Type                          | Default         | Description                                 |
-| ------------ | ----------------------------- | ----------------| ------------------------------------------- |
-| `className`  | `String`                      | `'split-view'`  | Class name of Parent element.               |
-| `sizes`      | `Array<Number>`               | `[]`            | Initial sizes of each element in %.         |
-| `minSize`    | `Number`                      | `0`             | Minimum size.                               |
-| `gutterSize` | `Number`                      | `5`             | Gutter size (seperator).                    |
-| `direction`  | `String`                      | `'horizontal'`  | Resize direction: horizontal or vertical.   |
-| `onDragEnd`  | `Method`                      | `null`          | Callback with new sizes in %.               |
+| Name         | Type            | Default               | Description                               |
+| ------------ | ----------------| --------------------- | ------------------------------------------|
+| `className`  | `String`        | `'split-view'`        | Class name of Parent element.             |
+| `style`      | `Object`        | `{ display: "flex" }` | Css style for Parent element.             |
+| `sizes`      | `Array<Number>` | `[]`                  | Initial sizes of each element in %.       |
+| `minSize`    | `Number`        | `0`                   | Minimum size.                             |
+| `gutterSize` | `Number`        | `5`                   | Gutter size (seperator).                  |
+| `direction`  | `String`        | `'horizontal'`        | Resize direction: horizontal or vertical. |
+| `onDragEnd`  | `Method`        | `null`                | Callback with new sizes in %.             |
 
 ## Notes
 - Tested on Chrome 67, Firefox 67, Edge 70, Opera 67, Safari 11, Android (>= 4).
