@@ -15,6 +15,7 @@ export default function ReactSplitViews ({
   const parentRef = useRef();
 
   useEffect(() => {
+    let sp = null;
     if (parentRef && parentRef.current) {
 
       const options = {
@@ -26,8 +27,10 @@ export default function ReactSplitViews ({
         onDragEnd
       }
 
-      SplitViews(options)
+      sp = SplitViews(options)
     }
+
+    return () => sp && sp.destroy()
   }, []);
 
   return (<div className={className + " " + direction} style={style} ref={parentRef}

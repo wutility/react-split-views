@@ -44,7 +44,7 @@ import ReactSplitViews from 'react-split-views';
 import ReactSplitViews from 'react-split-views';
 
 <ReactSplitViews 
-    direction="horizontal" // required
+    direction="horizontal"
     sizes={[25, 50, 25]}   // required
     onDragEnd={(newSizes) => {}}
   >

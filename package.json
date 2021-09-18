@@ -1,6 +1,6 @@
 {
   "name": "react-split-views",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Utility for Resizable Split Views.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -18,9 +18,7 @@
   "peerDependencies": {
     "react": ">=16.8.0"
   },
-  "dependencies": {
-    "split-views": "^2.0.12"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/preset-env": "^7.15.4",
@@ -32,13 +30,13 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
-    "split-views": "^2.0.12",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "rollup": "^2.56.3",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.1",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "split-views": "2.1.0"
   },
   "browserslist": {
     "production": [
