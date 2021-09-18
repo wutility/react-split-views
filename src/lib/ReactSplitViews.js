@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef } from 'react';
+import React, { Fragment, useEffect, useRef } from 'react';
 import SplitViews from 'split-views';
 
 export default function ReactSplitViews ({

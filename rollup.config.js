@@ -31,6 +31,6 @@ export default {
       exclude: 'node_modules/**'
     }),
     commonjs(),
-    process.env.NODE_ENV === 'production' ? terser() : ''
+    process.env.NODE_ENV.includes('production') ? terser() : ''
   ]
 };
