@@ -17,36 +17,21 @@
 
 <hr />  
 
-### [Demo](https://react-split-views.netlify.app)
+## [Codesandbox Demo](https://codesandbox.io/s/react-split-views-4hjyk)
 
-```js
+```bash
 $ npm i react-split-views
-// or
+# or
 $ yarn add react-split-views
 ```
 
 ## Usage
-```js
-import ReactSplitViews from 'react-split-views';
-```
-
-- **Import from CDN (UMD):**
-```html
-<script src="https://cdn.jsdelivr.net/npm/react-split-views/build/index.min.js"></script>
-<!-- Or via unpkg -->
-<script src="https://unpkg.com/react-split-views"></script>
-<!-- Access via global object : window.ReactSplitViews -->
-```            
-
-## Usage
-
 ```jsx
 import ReactSplitViews from 'react-split-views';
 
 <ReactSplitViews 
     direction="horizontal"
     sizes={[25, 50, 25]}   // required
-    onDragEnd={(newSizes) => {}}
   >
   <div>Child 1</div>
   <div>Child 2</div>
@@ -69,7 +54,7 @@ import ReactSplitViews from 'react-split-views';
 ## Notes
 - Tested on Chrome 67, Firefox 67, Edge 70, Opera 67, Safari 11, Android (>= 4).
 - React Split Views is flex-based.
-- React Split Views built using this package [SplitViews](https://github.com/wutility/split-views).
+- React Split Views built on top [SplitViews](https://github.com/wutility/split-views).
 - All pull requests are welcome, feel free.
 
 ## License

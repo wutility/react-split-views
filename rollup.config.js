@@ -10,12 +10,6 @@ export default {
   input: "src/lib/ReactSplitViews.js",
   output: [
     {
-      name: "ReactSplitViews",
-      file: packageJson.main,
-      format: "umd",
-      sourcemap: false
-    },
-    {
       file: packageJson.module,
       format: "esm",
       sourcemap: true
