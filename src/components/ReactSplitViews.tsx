@@ -1,23 +1,39 @@
 import React, { Fragment, useEffect, useRef } from 'react';
 import SplitViews from 'split-views';
 
-export default function ReactSplitViews ({
+interface IProps {
+  children?: Array<React.ReactChild>,
+  style?: object,
+  className?: string,
+  onDragEnd?: any,
+  gutterSize?: number,
+  minSize?: number,
+  sizes: any,
+  direction?: string
+}
+
+export function ReactSplitViews({
   children,
-  style = { display: "flex" },
+  style,
   className = "split-views",
   onDragEnd,
   gutterSize = 5,
   minSize = 0,
-  sizes,
+  sizes = [50, 50],
   direction = 'horizontal'
-}) {
+}: IProps) {
 
-  const parentRef = useRef();
+  const parentRef = useRef<any>();
+  
+  const defaultStyle: object = {
+    display: "flex",
+    flexDirection: direction === 'horizontal' ? 'row' : 'column',
+    ...style
+  };
 
   useEffect(() => {
-    let sp = null;
+    let sp: any = null;
     if (parentRef && parentRef.current) {
-
       const options = {
         parent: parentRef.current,
         direction,
@@ -33,11 +49,11 @@ export default function ReactSplitViews ({
     return () => sp && sp.destroy()
   }, []);
 
-  return (<div className={className + " " + direction} style={style} ref={parentRef}
-    style={{ flexDirection: direction === 'horizontal' ? 'row' : 'column' }}>
-    {children.map((child, i) => <Fragment key={i}>
+  return (<div className={className + " " + direction} style={defaultStyle} ref={parentRef}>
+    {children?.map((child, i) => <Fragment key={i}>
       {child}
       {i < children.length - 1 && <span className="sp-gutter"></span>}
     </Fragment>)}
   </div>);
 }
+

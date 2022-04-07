@@ -1,13 +1,13 @@
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
-import babel from '@rollup/plugin-babel';
-import { terser } from "rollup-plugin-terser";
+import typescript from "rollup-plugin-typescript2";
+import postcss from "rollup-plugin-postcss";
 
 const packageJson = require("./package.json");
 
 export default {
-  input: "src/lib/ReactSplitViews.js",
+  input: "src/components/ReactSplitViews.tsx",
   output: [
     {
       file: packageJson.module,
@@ -18,13 +18,10 @@ export default {
   plugins: [
     peerDepsExternal(),
     resolve(),
-    babel({
-      presets: ['@babel/env', '@babel/preset-react'],
-      plugins: ['@babel/plugin-transform-runtime'],
-      babelHelpers: 'runtime',
-      exclude: 'node_modules/**'
-    }),
     commonjs(),
-    process.env.NODE_ENV.includes('production') ? terser() : ''
+    typescript({ useTsconfigDeclarationDir: true }),
+    postcss({
+        extensions: ['.css']
+    })
   ]
 };

@@ -17,6 +17,7 @@
 
 <hr />  
 
+## [Demo](https://wutility.github.io/react-split-views)
 ## [Codesandbox Demo](https://codesandbox.io/s/react-split-views-4hjyk)
 
 ```bash
