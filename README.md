@@ -28,7 +28,7 @@ $ yarn add react-split-views
 
 ## Usage
 ```jsx
-import ReactSplitViews from 'react-split-views';
+import { ReactSplitViews } from 'react-split-views';
 
 <ReactSplitViews 
     direction="horizontal"
